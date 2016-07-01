@@ -76,7 +76,7 @@
           "allowShortCircuit": true
         }
       ],
-      "new-cap": [
+      "babel/new-cap": [
         2,
         {
           "capIsNewExceptions": [
@@ -85,6 +85,9 @@
             "Topic"
           ]
         }
+      ],
+      "no-mixed-operators": [
+        0
       ]
     }
   },
@@ -116,7 +119,7 @@
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "watchify": "^3.6.1",
-    "xo": "^0.12.1"
+    "xo": "^0.16.0"
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
