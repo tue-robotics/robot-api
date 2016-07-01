@@ -261,13 +261,13 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _ed = require('./ed');
-
-var _ed2 = _interopRequireDefault(_ed);
-
 var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
+
+var _ed = require('./ed');
+
+var _ed2 = _interopRequireDefault(_ed);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -468,6 +468,8 @@ var _roslib = (typeof window !== "undefined" ? window['ROSLIB'] : typeof global 
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
 var Ed = function (_EventEmitter) {
   (0, _inherits3.default)(Ed, _EventEmitter);
 
@@ -559,7 +561,7 @@ var Ed = function (_EventEmitter) {
           // update object
           var oldObj = _this3.entities.get(id);
 
-          if (entity.hasOwnProperty('pose')) {
+          if (hasOwnProperty.call(entity, 'pose')) {
             var _parseEdPosition = parseEdPosition(entity.pose);
 
             var position = _parseEdPosition.position;
@@ -573,7 +575,7 @@ var Ed = function (_EventEmitter) {
             oldObj.quaternion && (newObj.quaternion = oldObj.quaternion);
           }
 
-          if (entity.hasOwnProperty('mesh')) {
+          if (hasOwnProperty.call(entity, 'mesh')) {
             var _parseEdMesh = parseEdMesh(entity.mesh);
 
             var vertices = _parseEdMesh.vertices;
@@ -581,7 +583,7 @@ var Ed = function (_EventEmitter) {
 
             newObj.vertices = vertices;
             newObj.faces = faces;
-          } else if (entity.hasOwnProperty('convex_hull')) {
+          } else if (hasOwnProperty.call(entity, 'convex_hull')) {
             var _parseEdConvexHull = parseEdConvexHull(entity.convex_hull);
 
             var _vertices = _parseEdConvexHull.vertices;
@@ -607,7 +609,7 @@ var Ed = function (_EventEmitter) {
         } else {
           // add object
 
-          if (entity.hasOwnProperty('pose')) {
+          if (hasOwnProperty.call(entity, 'pose')) {
             var _parseEdPosition2 = parseEdPosition(entity.pose);
 
             var _position = _parseEdPosition2.position;
@@ -617,7 +619,7 @@ var Ed = function (_EventEmitter) {
             newObj.quaternion = _quaternion;
           }
 
-          if (entity.hasOwnProperty('mesh')) {
+          if (hasOwnProperty.call(entity, 'mesh')) {
             var _parseEdMesh2 = parseEdMesh(entity.mesh);
 
             var _vertices2 = _parseEdMesh2.vertices;
@@ -625,7 +627,7 @@ var Ed = function (_EventEmitter) {
 
             newObj.vertices = _vertices2;
             newObj.faces = _faces2;
-          } else if (entity.hasOwnProperty('convex_hull')) {
+          } else if (hasOwnProperty.call(entity, 'convex_hull')) {
             var _parseEdConvexHull2 = parseEdConvexHull(entity.convex_hull);
 
             var _vertices3 = _parseEdConvexHull2.vertices;
@@ -926,8 +928,11 @@ var _hardwareProperties2 = _interopRequireDefault(_hardwareProperties);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
 // Hardware constants
 
+// Robot specific Hardware constants that should come from the parameter server
 var levels = {
   STALE: 0,
   IDLE: 1,
@@ -937,9 +942,6 @@ var levels = {
 };
 
 // define how the actions map to hardware commands
-
-
-// Robot specific Hardware constants that should come from the parameter server
 var commands = {
   home: 21,
   start: 22,
@@ -1064,10 +1066,10 @@ var Hardware = function (_EventEmitter) {
   }, {
     key: 'send_command',
     value: function send_command(part, command) {
-      if (!hardwareIds.hasOwnProperty(part)) {
+      if (!hasOwnProperty.call(hardwareIds, part)) {
         throw new RangeError('Invalid part');
       }
-      if (!commands.hasOwnProperty(command)) {
+      if (!hasOwnProperty.call(commands, command)) {
         throw new RangeError('Invalid command');
       }
 
@@ -1482,11 +1484,11 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _os = require('os');
+
 var _eventemitter = require('eventemitter2');
 
 var _roslib = (typeof window !== "undefined" ? window['ROSLIB'] : typeof global !== "undefined" ? global['ROSLIB'] : null);
-
-var _os = require('os');
 
 var _edRobocup = require('./ed-robocup');
 
