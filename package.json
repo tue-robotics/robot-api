@@ -76,7 +76,7 @@
           "allowShortCircuit": true
         }
       ],
-      "new-cap": [
+      "babel/new-cap": [
         2,
         {
           "capIsNewExceptions": [
@@ -85,6 +85,9 @@
             "Topic"
           ]
         }
+      ],
+      "no-mixed-operators": [
+        0
       ]
     }
   },
