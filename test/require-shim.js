@@ -1,5 +1,7 @@
 /* eslint no-var: 0 */
 
+const hasOwnProperty = Object.prototype.hasOwnProperty;
+
 window.require = function require(path) {
   var load;
   switch (path) {
@@ -24,7 +26,7 @@ window.require = function require(path) {
 
         location = location.charAt(0).toUpperCase() + location.slice(1);
 
-        if (window.core.hasOwnProperty(location) && window.core[location].hasOwnProperty(method)) {
+        if (hasOwnProperty.call(window.core, location) && hasOwnProperty.call(window.core[location], method)) {
           load = window.core[location][method];
         } else {
           console.warn('core-js method not found', path);

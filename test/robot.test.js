@@ -1,12 +1,13 @@
 /* eslint no-unused-expressions: 0 */
 import chai from 'chai';
 import sinonChai from 'sinon-chai';
-chai.use(sinonChai);
-const should = chai.should();
 
 import {stub, useFakeTimers} from 'sinon';
 
 import {Robot} from '../lib';
+
+const should = chai.should();
+chai.use(sinonChai);
 
 describe('Robot', () => {
   const exampleUrl = 'ws://example.com:9090';
