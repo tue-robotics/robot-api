@@ -1,6 +1,6 @@
 {
   "name": "robot-api",
-  "version": "0.5.2",
+  "version": "0.6.1",
   "license": "MIT",
   "repository": "tue-robotics/robot-api",
   "author": {
@@ -76,7 +76,7 @@
           "allowShortCircuit": true
         }
       ],
-      "new-cap": [
+      "babel/new-cap": [
         2,
         {
           "capIsNewExceptions": [
@@ -85,6 +85,9 @@
             "Topic"
           ]
         }
+      ],
+      "no-mixed-operators": [
+        0
       ]
     }
   },
@@ -109,19 +112,19 @@
     "karma-babel-preprocessor": "^6.0.1",
     "karma-cli": "^0.1.1",
     "karma-firefox-launcher": "^0.1.7",
-    "karma-mocha": "^0.2.1",
+    "karma-mocha": "^1.1.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
     "rimraf": "^2.4.2",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "watchify": "^3.6.1",
-    "xo": "^0.12.1"
+    "xo": "^0.16.0"
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
     "eventemitter2": "^1.0.0",
-    "lodash": "^4.0.0",
+    "lodash": "^4.10.0",
     "roslib": "RobotWebTools/roslibjs#f406f6a570a27747dc6a8fc5a3b68dd4a974f65d"
   },
   "config": {
