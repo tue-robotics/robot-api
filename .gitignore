@@ -6,4 +6,4 @@ coverage/
 dist/cjs/
 
 npm-debug.log*
-
+.nyc_output/

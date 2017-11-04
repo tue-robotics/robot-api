@@ -1,9 +1,14 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-    "transform-class-properties",
-    "transform-runtime",
-    "transform-strict-mode",
-    ["transform-es2015-for-of", {"loose": true}]
-  ]
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "6"
+      }
+    }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
 }

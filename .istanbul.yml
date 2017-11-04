@@ -1,5 +1,0 @@
-instrumentation:
-  root: lib
-  include-all-sources: true
-  excludes:
-    - '**/graveyard/**'
