@@ -1,18 +1,13 @@
 /* eslint no-unused-expressions: 0 */
 import chai from 'chai';
 import sinonChai from 'sinon-chai';
+import {stub} from 'sinon';
+import {Ros} from 'roslib';
+
+import {Base, Ed, Hardware, Head, Robot} from '../lib';
+
 chai.use(sinonChai);
 chai.should();
-
-import {stub} from 'sinon';
-
-import {Base} from '../lib';
-import {Ed} from '../lib';
-import {Hardware} from '../lib';
-import {Head} from '../lib';
-import {Robot} from '../lib';
-
-import {Ros} from 'roslib';
 
 const setup = () => {
   const ros = new Ros({

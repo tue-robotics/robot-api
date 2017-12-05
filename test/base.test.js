@@ -1,14 +1,13 @@
 /* eslint no-unused-expressions: 0 */
 import chai from 'chai';
 import sinonChai from 'sinon-chai';
-chai.use(sinonChai);
-chai.should();
-
 import {stub} from 'sinon';
+import {Ros} from 'roslib';
 
 import {Base} from '../lib';
 
-import {Ros} from 'roslib';
+chai.use(sinonChai);
+chai.should();
 
 const setup = () => {
   const ros = new Ros({
