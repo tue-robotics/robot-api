@@ -1,9 +1,8 @@
-node_modules
-bower_components
+node_modules/
+
 coverage/
 
-# only commit the global bundle for bower
-dist/cjs/
+dist/
 
 npm-debug.log*
 .nyc_output/
