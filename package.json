@@ -9,6 +9,7 @@
     "url": "https://github.com/Rayman"
   },
   "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
     "lib/",
     "dist/"
@@ -20,12 +21,11 @@
     "deps:missing": "dependency-check .",
     "deps:extra": "dependency-check . --extra --no-dev",
     "prebuild": "npm run clean && npm run lint",
-    "build": "npm run build_cjs",
-    "watch": "npm run watch_cjs",
+    "build": "npm run build_cjs && npm run build_esm",
     "postbuild": "npm run deps",
-    "build_cjs": "babel lib/ --out-dir dist/cjs/ --source-maps",
-    "watch_cjs": "babel lib/ --watch --out-dir dist/cjs/ --source-maps",
-    "test": "mocha --require babel-register test/**/*.test.js",
+    "build_cjs": "cross-env BABEL_ENV=cjs babel lib/ --out-dir dist/cjs/ --source-maps",
+    "build_esm": "cross-env BABEL_ENV=esm babel lib/ --out-dir dist/esm/ --source-maps",
+    "test": "cross-env BABEL_ENV=cjs mocha --require babel-register test/**/*.test.js",
     "coverage": "cross-env NODE_ENV=test nyc mocha test/**/*.test.js",
     "version": "npm run build",
     "patch": "npm version patch && npm publish",
