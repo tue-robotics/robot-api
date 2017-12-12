@@ -1,8 +1,8 @@
 sudo: false
 language: node_js
 node_js:
-  - '0.12'
   - '4'
+  - '6'
   - 'stable'
 
 # install node-canvas dependencies
@@ -18,7 +18,6 @@ addons:
     - libpango1.0-dev
 
 before_script:
-  - npm install -g codeclimate-test-reporter
   - npm run build
 
   # Run Firefox with a virtual screen
@@ -27,4 +26,5 @@ before_script:
 
 after_script:
   - npm run coverage
+  # TODO: report somewhere
   # - codeclimate-test-reporter < coverage/lcov.info
