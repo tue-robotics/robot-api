@@ -2,8 +2,9 @@ sudo: false
 dist: trusty
 language: node_js
 node_js:
-  - '4'
-  - '6'
+  - '10'
+  - '11'
+  - '12'
   - 'stable'
 
 # install node-canvas dependencies
