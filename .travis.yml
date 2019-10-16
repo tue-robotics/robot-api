@@ -1,5 +1,5 @@
 sudo: false
-dist: trusty
+dist: xenial
 language: node_js
 node_js:
   - '10'
@@ -21,8 +21,7 @@ before_script:
   - npm run build
 
   # Run Firefox with a virtual screen
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+  - xvfb-run make test
 
 after_script:
   - npm run coverage
