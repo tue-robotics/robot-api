@@ -18,7 +18,7 @@
     "lint": "xo",
     "clean": "rimraf dist/",
     "deps": "npm run deps:missing && npm run deps:extra",
-    "deps:missing": "dependency-check .",
+    "deps:missing": "dependency-check . --missing",
     "deps:extra": "dependency-check . --extra --no-dev",
     "prebuild": "npm run clean && npm run lint",
     "build": "npm run build_cjs && npm run build_esm",
