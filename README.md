@@ -19,5 +19,4 @@ Node.js API to interact with service robots. Also runs in the browser with brows
 [daviddm-image]: https://david-dm.org/tue-robotics/robot-api.svg
 [daviddm-url]: https://david-dm.org/tue-robotics/robot-api
 [daviddm-image-dev]: https://david-dm.org/tue-robotics/robot-api/dev-status.svg
-[daviddm-url-dev]: https://david-dm.org/tue-robotics/robot-api#info=devDependencies
-
+[daviddm-url-dev]: https://david-dm.org/tue-robotics/robot-api?type=dev
