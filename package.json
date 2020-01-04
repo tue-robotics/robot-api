@@ -20,7 +20,7 @@
     "deps": "npm run deps:missing && npm run deps:extra",
     "deps:missing": "dependency-check .",
     "deps:extra": "dependency-check . --extra --no-dev",
-    "prebuild": "npm run clean && npm run lint",
+    "prebuild": "npm run clean",
     "build": "npm run build_cjs && npm run build_esm",
     "postbuild": "npm run deps",
     "build_cjs": "cross-env BABEL_ENV=cjs babel lib/ --out-dir dist/cjs/ --source-maps",
@@ -59,7 +59,8 @@
   },
   "dependencies": {
     "eventemitter2": "^4.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.15",
+    "query-string": "^6.9.0",
     "roslib": "^0.19.0"
   },
   "xo": {
