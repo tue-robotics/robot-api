@@ -22,8 +22,8 @@ addons:
 before_script:
   - npm run build
 
-  # Run Firefox with a virtual screen
-  - xvfb-run make test
+script:
+  - xvfb-run npm run test
 
 after_script:
   - npm run coverage
