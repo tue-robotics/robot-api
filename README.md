@@ -1,4 +1,5 @@
-# robot-api [![NPM version][npm-image]][npm-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Test Coverage][coverage-image]][coverage-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-image-dev]][daviddm-url-dev]
+# robot-api
+[![Build Status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Test Coverage][coverage-image]][coverage-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-image-dev]][daviddm-url-dev]
 
 Node.js API to interact with service robots. Also runs in the browser with browserify and bower.
 
@@ -7,6 +8,9 @@ Node.js API to interact with service robots. Also runs in the browser with brows
 
 ## Usage
 ...
+
+[travis-image]: https://travis-ci.com/tue-robotics/robot-api.svg?branch=master
+[travis-url]: https://travis-ci.com/tue-robotics/robot-api
 
 [npm-image]: https://badge.fury.io/js/robot-api.svg
 [npm-url]: https://npmjs.org/package/robot-api

@@ -2,39 +2,48 @@
   "env": {
     "cjs": {
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "4"
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "4"
+            }
           }
-        }]
+        ]
       ],
       "plugins": [
-        "transform-class-properties"
+        "@babel/plugin-proposal-class-properties"
       ]
     },
     "esm": {
       "presets": [
-        ["env", {
-          "targets": {
-            "browsers": ">1%"
-          },
-          "modules": false
-        }]
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": ">1%"
+            },
+            "modules": false
+          }
+        ]
       ],
       "plugins": [
-        "transform-class-properties"
+        "@babel/plugin-proposal-class-properties"
       ]
     },
     "test": {
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "4"
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "4"
+            }
           }
-        }]
+        ]
       ],
-      "plugins": [ 
-        "transform-class-properties",        
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
         "istanbul"
       ]
     }

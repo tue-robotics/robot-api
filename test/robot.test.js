@@ -38,7 +38,7 @@ describe('Robot', () => {
       connect.should.have.not.been.called;
       robot.connect();
       connect.should.have.been.calledOnce;
-      connect.should.have.been.calledWithMatch(/ws:\/\/[a-zA-Z0-9-.]+:9090/);
+      connect.should.have.been.calledWithMatch(/ws:\/\/[a-zA-Z\d-.]+:9090/);
     });
 
     it('should remember the previous url', () => {

@@ -1,10 +1,12 @@
-sudo: false
-dist: xenial
+os: linux
+dist: bionic
 language: node_js
 node_js:
   - '10'
   - '11'
   - '12'
+  - '13'
+  - '14'
   - 'stable'
 
 # install node-canvas dependencies
@@ -20,8 +22,8 @@ addons:
 before_script:
   - npm run build
 
-  # Run Firefox with a virtual screen
-  - xvfb-run make test
+script:
+  - xvfb-run npm run test
 
 after_script:
   - npm run coverage
