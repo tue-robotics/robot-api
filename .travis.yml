@@ -20,7 +20,7 @@ before_script:
   - npm run build
 
 script:
-  - xvfb-run npm run test
+  - npm run test
 
 after_script:
   - npm run coverage
