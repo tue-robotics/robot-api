@@ -2,10 +2,7 @@ os: linux
 dist: bionic
 language: node_js
 node_js:
-  - '10'
-  - '11'
   - '12'
-  - '13'
   - '14'
   - 'stable'
 
