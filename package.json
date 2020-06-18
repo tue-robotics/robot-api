@@ -61,7 +61,7 @@
   "dependencies": {
     "eventemitter2": "^6.4.2",
     "lodash": "^4.17.13",
-    "roslib": "^1.0.1"
+    "roslib": "^1.1.0"
   },
   "xo": {
     "parser": "babel-eslint",
