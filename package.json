@@ -28,10 +28,10 @@
     "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register test/**/*.test.js",
     "coverage": "cross-env NODE_ENV=test nyc mocha test/**/*.test.js",
     "version": "npm run build",
-    "patch": "npm version patch && npm publish",
-    "minor": "npm version minor && npm publish",
-    "major": "npm version major && npm publish",
-    "postpublish": "git push && git push --tags"
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "postversion": "git push && git push --tags"
   },
   "nyc": {
     "require": [
