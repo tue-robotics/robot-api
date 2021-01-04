@@ -76,15 +76,15 @@
     "rules": {
       "capitalized-comments": "off",
       "import/extensions": [
-			  'error',
-	  		'always',
+			  "error",
+	  		"always",
 		  	{
   				ignorePackages: true,
   				// TypeScript doesn't yet support using extensions and fails with error TS2691.
 	  			pattern: {
-            js: 'never',
-  					ts: 'never',
-		  			tsx: 'never'
+            js: "never",
+  					ts: "never",
+		  			tsx: "never"
 				  }
 			  }
 		  ],
