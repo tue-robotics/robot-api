@@ -4,7 +4,7 @@ import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
 import {Ros} from 'roslib';
 
-import {Base, Ed, Hardware, Head, Robot} from '../lib';
+import {Base, Ed, Hardware, Head, Robot} from '../lib/index.js';
 
 chai.use(sinonChai);
 chai.should();
@@ -40,11 +40,11 @@ describe('Module initialization', () => {
   });
 
   // TODO: remove skipped modules
-  const skipModules = [Hardware, Head];
+  const skipModules = new Set([Hardware, Head]);
 
-  [Base, Ed, Hardware, Head].forEach(Module => {
+  for (const Module in [Base, Ed, Hardware, Head].values()) { // eslint-disable-line guard-for-in
     describe(`${Module.name} initialization`, () => {
-      const it2 = skipModules.some(key => key === Module) ? it.skip : it;
+      const it2 = skipModules.has(Module) ? it.skip : it;
 
       it2('should do nothing on creation', () => {
         const m = new Module(fixtures.robot);
@@ -53,7 +53,7 @@ describe('Module initialization', () => {
         fixtures.ros.callOnConnection.should.not.have.been.called;
       });
     });
-  });
+  }
 });
 
 describe('Robot initialization', () => {
