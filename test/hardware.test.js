@@ -5,7 +5,7 @@ import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
 import {Ros} from 'roslib';
 
-import {Hardware} from '../lib';
+import {Hardware} from '../lib/index.js';
 
 chai.use(sinonChai);
 chai.should();
@@ -72,7 +72,7 @@ describe('Hardware', () => {
       head: 5
     };
 
-    Object.keys(bodyParts).forEach(name => {
+    for (const name in bodyParts) { // eslint-disable-line guard-for-in
       it(`it should work for the bodypart ${name}`, () => {
         hardware.send_command(name, 'home');
         const expected = {data: [bodyParts[name], 21]};
@@ -81,7 +81,7 @@ describe('Hardware', () => {
         const message = callOnConnection.lastCall.args[0];
         message.msg.should.deep.equal(expected);
       });
-    });
+    }
 
     const commands = {
       home: 21,
@@ -90,7 +90,7 @@ describe('Hardware', () => {
       reset: 24
     };
 
-    Object.keys(commands).forEach(name => {
+    for (const name in commands) { // eslint-disable-line guard-for-in
       it(`it should work for the command ${name}`, () => {
         hardware.send_command('all', name);
         const expected = {data: [0, commands[name]]};
@@ -99,7 +99,7 @@ describe('Hardware', () => {
         const message = callOnConnection.lastCall.args[0];
         message.msg.should.deep.equal(expected);
       });
-    });
+    }
 
     it('should throw for an unknown bodypart', () => {
       (function () {
