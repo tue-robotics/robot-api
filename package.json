@@ -93,12 +93,12 @@
       ]
     },
     "overrides": [
-			{
-				"files": "test/*.js",
-				"rules": {
+      {
+        "files": "test/*.js",
+        "rules": {
           "import/extensions": "off"
         }
-			}
-		]
+      }
+    ]
   }
 }
