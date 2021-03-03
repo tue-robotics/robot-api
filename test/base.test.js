@@ -4,7 +4,7 @@ import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
 import {Ros} from 'roslib';
 
-import {Base} from '../lib';
+import {Base} from '../lib/index.js';
 
 chai.use(sinonChai);
 chai.should();

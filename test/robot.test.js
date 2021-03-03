@@ -3,7 +3,7 @@ import chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub, useFakeTimers} from 'sinon';
 
-import {Robot} from '../lib';
+import {Robot} from '../lib/index.js';
 
 chai.use(sinonChai);
 const should = chai.should();
