@@ -11,16 +11,16 @@ chai.should();
 
 const setup = () => {
   const ros = new Ros({
-    encoding: 'ascii'
+    encoding: 'ascii',
   });
 
   const robot = {
-    ros
+    ros,
   };
 
   const fixtures = {
     ros,
-    robot
+    robot,
   };
 
   return fixtures;

@@ -66,7 +66,7 @@ describe('Robot', () => {
       send = stub();
       send.returns();
       robot.ros.socket = {
-        send
+        send,
       };
     });
 
