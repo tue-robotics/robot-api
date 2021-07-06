@@ -12,16 +12,16 @@ chai.should();
 
 const setup = () => {
   const ros = new Ros({
-    encoding: 'ascii'
+    encoding: 'ascii',
   });
 
   const robot = {
-    ros
+    ros,
   };
 
   const fixtures = {
     ros,
-    robot
+    robot,
   };
 
   return fixtures;
@@ -69,7 +69,7 @@ describe('Hardware', () => {
       spindle: 2,
       left_arm: 3,
       right_arm: 4,
-      head: 5
+      head: 5,
     };
 
     for (const name in bodyParts) { // eslint-disable-line guard-for-in
@@ -87,7 +87,7 @@ describe('Hardware', () => {
       home: 21,
       start: 22,
       stop: 23,
-      reset: 24
+      reset: 24,
     };
 
     for (const name in commands) { // eslint-disable-line guard-for-in
