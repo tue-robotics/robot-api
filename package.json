@@ -59,7 +59,7 @@
     "xo": "^0.44.0"
   },
   "dependencies": {
-    "eventemitter2": "^6.4.0",
+    "eventemitter2": "^6.4.5",
     "lodash": "^4.17.0",
     "roslib": "^1.1.0"
   },
