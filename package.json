@@ -66,6 +66,9 @@
   "xo": {
     "parser": "babel-eslint",
     "space": true,
+    "parserOptions": {
+      "ecmaVersion": 2021
+    },
     "envs": [
       "mocha"
     ],
