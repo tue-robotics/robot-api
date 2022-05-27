@@ -12,7 +12,8 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-proposal-class-properties"
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes"
       ]
     },
     "esm": {
@@ -28,7 +29,8 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-proposal-class-properties"
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes"
       ]
     },
     "test": {
@@ -44,6 +46,7 @@
       ],
       "plugins": [
         "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes",
         "istanbul"
       ]
     }
