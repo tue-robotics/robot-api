@@ -3,7 +3,9 @@ import chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
 import {Ros} from 'roslib';
-import {Base, Ed, Hardware, Head, Robot} from '../lib/index.js';
+import {
+  Base, Ed, Hardware, Head, Robot,
+} from '../lib/index.js';
 
 chai.use(sinonChai);
 chai.should();
