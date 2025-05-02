@@ -1,16 +1,16 @@
 /* eslint no-unused-expressions: 0 */
 /* eslint no-use-extend-native/no-use-extend-native: 0 */
-import chai from 'chai';
+import * as chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
-import {Ros} from 'roslib';
+import ROSLIB from 'roslib';
 import {Hardware} from '../lib/index.js';
 
 chai.use(sinonChai);
 chai.should();
 
 const setup = () => {
-  const ros = new Ros({
+  const ros = new ROSLIB.Ros({
     encoding: 'ascii',
   });
 
