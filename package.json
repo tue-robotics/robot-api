@@ -57,7 +57,7 @@
     "rimraf": "^6.0.0",
     "sinon": "^19.0.1",
     "sinon-chai": "^4.0.0",
-    "xo": "^0.60.0"
+    "xo": "^1.0.3"
   },
   "dependencies": {
     "eventemitter2": "^6.4.5",
