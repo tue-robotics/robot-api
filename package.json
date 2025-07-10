@@ -15,7 +15,7 @@
     "dist/"
   ],
   "scripts": {
-    "lint": "xo",
+    "lint": "xo --config xo.config.js",
     "clean": "rimraf dist/",
     "deps": "npm run deps:missing && npm run deps:extra",
     "deps:missing": "dependency-check . --missing",
@@ -52,6 +52,7 @@
     "chai": "^5.2.0",
     "cross-env": "^7.0.0",
     "dependency-check": "^4.1.0",
+    "globals": "^16.3.0",
     "mocha": "^11.7.0",
     "nyc": "^17.1.0",
     "rimraf": "^6.0.0",
@@ -63,43 +64,5 @@
     "eventemitter2": "^6.4.5",
     "lodash": "^4.17.0",
     "roslib": "^1.4.1"
-  },
-  "xo": {
-    "parser": "@babel/eslint-parser",
-    "space": true,
-    "envs": [
-      "mocha"
-    ],
-    "ignores": [
-      "dist/**",
-      "lib/graveyard/*"
-    ],
-    "rules": {
-      "capitalized-comments": "off",
-      "no-unused-expressions": [
-        2,
-        {
-          "allowShortCircuit": true
-        }
-      ],
-      "new-cap": [
-        "error",
-        {
-          "capIsNewExceptions": [
-            "ActionClient",
-            "Service",
-            "Topic"
-          ]
-        }
-      ]
-    },
-    "overrides": [
-      {
-        "files": "test/*.js",
-        "rules": {
-          "import/extensions": "off"
-        }
-      }
-    ]
   }
 }
