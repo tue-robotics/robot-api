@@ -63,6 +63,6 @@
   "dependencies": {
     "eventemitter2": "^6.4.5",
     "lodash": "^4.17.23",
-    "roslib": "^1.4.1"
+    "roslib": "^2.0.1"
   }
 }
