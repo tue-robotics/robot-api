@@ -10,6 +10,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "type": "module",
   "files": [
     "lib/",
     "dist/"
