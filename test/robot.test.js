@@ -1,4 +1,4 @@
-/* eslint no-unused-expressions: 0 */
+/* eslint no-unused-expressions: 0 -- In all tests */
 import * as chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub, useFakeTimers} from 'sinon';
@@ -37,7 +37,7 @@ describe('Robot', () => {
       connect.should.have.not.been.called;
       robot.connect();
       connect.should.have.been.calledOnce;
-      connect.should.have.been.calledWithMatch(/ws:\/\/[a-zA-Z\d-.]+:9090/);
+      connect.should.have.been.calledWithMatch(/ws:\/\/[\d\-.A-Za-z]+:9090/v);
     });
 
     it('should remember the previous url', () => {
@@ -54,7 +54,7 @@ describe('Robot', () => {
 
   describe('Robot.status', () => {
     /**
-     * Stubs
+     Stubs
      */
     let send;
     beforeEach('stub ros.socket.send', () => {
@@ -83,7 +83,7 @@ describe('Robot', () => {
     });
 
     /**
-     * Tests
+     Tests
      */
     it.skip('should have a default status', () => {
       robot.status.should.equal('closed');
