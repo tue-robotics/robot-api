@@ -1,5 +1,5 @@
-/* eslint no-unused-expressions: 0 */
-/* eslint no-use-extend-native/no-use-extend-native: 0 */
+/* eslint no-unused-expressions: 0 -- In all tests */
+/* eslint no-use-extend-native/no-use-extend-native: 0 -- Needed for the used test framework */
 import * as chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
@@ -62,7 +62,7 @@ describe('Hardware', () => {
     });
 
     const bodyParts = {
-      /* eslint camelcase:0 */
+      /* eslint camelcase:0 -- custom convention */
       all: 0,
       base: 1,
       spindle: 2,

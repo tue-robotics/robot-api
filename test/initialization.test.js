@@ -1,10 +1,14 @@
-/* eslint no-unused-expressions: 0 */
+/* eslint no-unused-expressions: 0 -- In all tests */
 import * as chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
 import ROSLIB from 'roslib';
 import {
-  Base, Ed, Hardware, Head, Robot,
+  Base,
+  Ed,
+  Hardware,
+  Head,
+  Robot,
 } from '../lib/index.js';
 
 chai.use(sinonChai);
