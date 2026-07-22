@@ -12,7 +12,8 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-class-properties",
+        "@babel/plugin-transform-private-methods",
         "@babel/plugin-transform-classes"
       ]
     },
@@ -29,7 +30,8 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-class-properties",
+        "@babel/plugin-transform-private-methods",
         "@babel/plugin-transform-classes"
       ]
     },
@@ -45,7 +47,8 @@
         ]
       ],
       "plugins": [
-        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-class-properties",
+        "@babel/plugin-transform-private-methods",
         "@babel/plugin-transform-classes",
         "istanbul"
       ]
