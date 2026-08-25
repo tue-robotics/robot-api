@@ -34,24 +34,6 @@
         "@babel/plugin-transform-private-methods",
         "@babel/plugin-transform-classes"
       ]
-    },
-    "test": {
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            "targets": {
-              "node": "4"
-            }
-          }
-        ]
-      ],
-      "plugins": [
-        "@babel/plugin-transform-class-properties",
-        "@babel/plugin-transform-private-methods",
-        "@babel/plugin-transform-classes",
-        "istanbul"
-      ]
     }
   }
 }
