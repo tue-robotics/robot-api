@@ -1,20 +1,16 @@
 {
   "name": "robot-api",
   "version": "1.0.0",
+  "description": "Generic Service Robot Node.js/JavaScript API",
   "license": "MIT",
   "repository": "tue-robotics/robot-api",
-  "author": {
-    "name": "Ramon Wijnands",
-    "email": "rayman747@hotmail.com",
-    "url": "https://github.com/Rayman"
-  },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "author": "Ramon Wijnands <rayman747@hotmail.com> (https://github.com/Rayman)",
   "type": "module",
-  "files": [
-    "lib/",
-    "dist/"
-  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "lint": "xo --config xo.config.js",
     "clean": "rimraf dist/",
@@ -34,18 +30,23 @@
     "major": "npm version major",
     "postversion": "git push && git push --tags"
   },
-  "c8": {
-    "all": true,
-    "include": [
-      "lib/**/*.js"
-    ],
-    "exclude": [
-      "lib/graveyard/**"
-    ],
-    "reporter": [
-      "text",
-      "lcov"
-    ]
+  "files": [
+    "dist/",
+    "lib/"
+  ],
+  "keywords": [
+    "robot",
+    "robotics",
+    "ros",
+    "rosbridge",
+    "roslib",
+    "api"
+  ],
+  "dependencies": {
+    "eventemitter2": "^6.4.5",
+    "lodash": "^4.18.1",
+    "query-string": "^9.5.0",
+    "roslib": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^8.0.0",
@@ -66,10 +67,17 @@
     "sinon-chai": "^4.0.1",
     "xo": "^5.0.1"
   },
-  "dependencies": {
-    "eventemitter2": "^6.4.5",
-    "lodash": "^4.18.1",
-    "query-string": "^9.5.0",
-    "roslib": "^2.1.0"
+  "c8": {
+    "all": true,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "exclude": [
+      "lib/graveyard/**"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ]
   }
 }
