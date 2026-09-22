@@ -66,18 +66,5 @@
     "sinon": "^22.1.0",
     "sinon-chai": "^4.0.1",
     "xo": "^5.0.1"
-  },
-  "c8": {
-    "all": true,
-    "include": [
-      "lib/**/*.js"
-    ],
-    "exclude": [
-      "lib/graveyard/**"
-    ],
-    "reporter": [
-      "text",
-      "lcov"
-    ]
   }
 }
