@@ -3,7 +3,7 @@
 import * as chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {stub} from 'sinon';
-import ROSLIB from 'roslib';
+import * as ROSLIB from 'roslib';
 import {Hardware} from '../lib/index.js';
 
 chai.use(sinonChai);
