@@ -1,7 +1,9 @@
 import babelParser from '@babel/eslint-parser';
 import globals from 'globals';
 
-/** @type {import('xo').FlatXoConfig} */
+/**
+@type {import('xo').FlatXoConfig}
+*/
 const xoConfig = [
   {
     languageOptions: {
@@ -41,6 +43,13 @@ const xoConfig = [
     files: 'test/*.js',
     rules: {
       'import/extensions': 'off',
+    },
+  },
+  {
+    files: 'package.json',
+    rules: {
+      // Switching to an exports map is a deliberate public API change, not a lint fixup.
+      'package-json/prefer-exports': 'off',
     },
   },
 ];
