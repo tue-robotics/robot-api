@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^8.0.0",
-    "@babel/core": "^8.0.0",
+    "@babel/core": "^8.1.0",
     "@babel/eslint-parser": "^8.0.0",
     "@babel/plugin-transform-class-properties": "^8.0.0",
     "@babel/plugin-transform-classes": "^8.0.0",
